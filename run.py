@@ -28,7 +28,7 @@ for test in QA_TESTS:
 
     while True:
         screenshot_path = executor.screenshot()
-        vision_state = vision.analyze(screenshot_path)
+        vision_state = vision.image_to_text(screenshot_path)
 
         action = planner.next_action(goal, vision_state)
 
